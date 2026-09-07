@@ -1,0 +1,21 @@
+<%= form_with(model: @book, local: true) do |f| %>
+
+	<p>
+		<%= f.label :book_title %> <br>
+		<%= f.text_field :book_title %>
+	</p>
+
+	<p>
+		<%= f.label :author_ids, "select Authors" %> <br>
+		<%= f.collection_check_boxes :author_ids, Author.all, :id, :first_name do |b| %>
+		<%= b.check_box %>
+		<%= b.label %>
+		<% end %>
+
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>

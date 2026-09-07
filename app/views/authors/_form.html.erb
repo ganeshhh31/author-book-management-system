@@ -1,0 +1,19 @@
+<%= form_with(model: @author, local: true) do |f| %>
+<p>
+	<%= f.label :first_name %><br>
+	<%= f.text_field :first_name %>
+</p>
+<p>
+	<%= f.label :last_name %><br>
+	<%= f.text_field :last_name %>
+</p>
+<p>
+	<%= f.label :first_name %><br>
+	<%= f.date_field :date_of_birth%>
+</p>
+
+<p>
+	<%= f.submit %>
+</p>
+
+<% end %>

@@ -1,0 +1,18 @@
+	
+<h1>Book Details</h1>
+
+<p>
+	<strong>Book Title:</strong>
+	<%= @book.book_title %>
+</p>
+
+<p>
+	<strong>Authors:</strong>
+	<% @book.author.each do |author| %>
+		<%= author.first_name %> <%= author.last_name %><br>
+	<% end %>
+</p>
+
+<%= link_to "Edit", edit_book_path(@book) %> |
+<%= link_to "Delete", book_path(@book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> |
+<%= link_to "Return to Book Listing", books_path %>

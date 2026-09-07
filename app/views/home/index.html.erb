@@ -1,0 +1,36 @@
+<div class="home-container">
+
+  <div class="hero-section">
+    <h1>Author-Book Management System</h1>
+
+    <p>
+      Manage your authors and books in one simple place.
+    </p>
+  </div>
+
+  <div class="features-container">
+
+    <div class="feature-card">
+      <h2>Authors</h2>
+
+      <p>
+        Add, view, edit and manage all authors in your library.
+      </p>
+
+      <%= link_to "Manage Authors →", authors_path, class: "feature-link" %>
+    </div>
+
+
+    <div class="feature-card">
+      <h2>Books</h2>
+
+      <p>
+        Manage books and assign multiple authors to each book.
+      </p>
+
+      <%= link_to "Manage Books →", books_path, class: "feature-link" %>
+    </div>
+
+  </div>
+
+</div>
