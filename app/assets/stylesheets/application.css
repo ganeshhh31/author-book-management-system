@@ -71,3 +71,173 @@
 .feature-link:hover {
   text-decoration: none;
 }
+
+.listing-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.listing-header {
+  margin-bottom: 30px;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.create-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 16px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* ============================= */
+/* AUTHOR MULTI SELECT DROPDOWN */
+/* ============================= */
+
+.author-selector {
+  position: relative;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.author-selector label {
+  display: block;
+  margin-bottom: 8px;
+}
+.author-dropdown-button {
+  width: 180px;
+  padding: 8px 12px;
+  font-size: 15px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+
+.author-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  margin-top: 5px;
+
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+  z-index: 1000;
+}
+
+
+.show-dropdown {
+  display: block;
+}
+
+
+.author-search {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+
+.author-search:focus {
+  outline: none;
+}
+
+
+.author-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+
+.author-option {
+  display: flex !important;
+  align-items: center;
+
+  padding: 10px;
+
+  cursor: pointer;
+}
+
+
+.author-option:hover {
+  background-color: #f5f5f5;
+}
+
+
+.author-option input {
+  margin-right: 10px;
+}
+
+/* Center all application pages */
+.page-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+.page-container form {
+  display: inline-block;
+  text-align: left;
+}
+
+
+.bottom-home-button {
+  margin-top: 25px;
+}
+/* ============================= */
+/* BOOK AND AUTHOR LIST SEARCH */
+/* ============================= */
+
+.listing-search {
+  margin-bottom: 25px;
+}
+
+.listing-search input {
+  width: 300px;
+  padding: 10px 15px;
+  font-size: 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.search-container {
+  margin-bottom: 25px;
+}
+
+.search-container input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+
+.not-found-message {
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}

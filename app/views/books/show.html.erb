@@ -5,12 +5,12 @@
 	<strong>Book Title:</strong>
 	<%= @book.book_title %>
 </p>
-
 <p>
-	<strong>Authors:</strong>
-	<% @book.author.each do |author| %>
-		<%= author.first_name %> <%= author.last_name %><br>
-	<% end %>
+  <strong>Authors:</strong><br>
+
+  <% @book.authors.each do |author| %>
+    <%= author.first_name %> <%= author.last_name %><br>
+  <% end %>
 </p>
 
 <%= link_to "Edit", edit_book_path(@book) %> |

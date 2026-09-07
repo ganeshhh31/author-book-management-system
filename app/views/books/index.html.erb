@@ -1,8 +1,33 @@
-<h1>Listing of Books</h1>
-<% @books.each do|book| %>
-	<p> 
-		<%= link_to book.book_title, book_path(book) %>
-	</p>
-<% end %>
+<div class="listing-container">
 
-<%= link_to "Create new Book", new_book_path %>	
+  <div class="listing-header">
+    <h1>Listing of Books</h1>
+  </div>
+
+  <div class="listing-search">
+    <input
+      type="text"
+      id="book-search"
+      placeholder="Search books..."
+    >
+
+    <p id="book-not-found" class="not-found-message">
+      Book not found
+    </p>
+  </div>
+
+  <div id="books-list">
+    <% @books.each do |book| %>
+      <p class="book-item">
+        <%= link_to book.book_title, book_path(book) %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "Create New Book", new_book_path, class: "create-button" %>
+
+  <br>
+
+  <%= link_to "← Back to Home", root_path, class: "home-button bottom-home-button" %>
+
+</div>

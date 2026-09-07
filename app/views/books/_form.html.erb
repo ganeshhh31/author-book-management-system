@@ -1,21 +1,86 @@
+<% selected_author_ids = @book.author_ids %>
+
+<% selected_authors = Author.where(id: selected_author_ids).order(:first_name) %>
+
+<% remaining_authors = Author.where.not(id: selected_author_ids).order(:first_name) %>
+
+
 <%= form_with(model: @book, local: true) do |f| %>
 
-	<p>
-		<%= f.label :book_title %> <br>
-		<%= f.text_field :book_title %>
-	</p>
+  <p>
+    <%= f.label :book_title %><br>
+    <%= f.text_field :book_title %>
+  </p>
 
-	<p>
-		<%= f.label :author_ids, "select Authors" %> <br>
-		<%= f.collection_check_boxes :author_ids, Author.all, :id, :first_name do |b| %>
-		<%= b.check_box %>
-		<%= b.label %>
-		<% end %>
 
-	</p>
+  <div class="author-selector">
 
-	<p>
-		<%= f.submit %>
-	</p>
+    <label>Select Authors</label>
+
+    <button type="button" class="author-dropdown-button">
+      Select Authors ▼
+    </button>
+
+
+    <div class="author-dropdown">
+
+      <input
+        type="text"
+        class="author-search"
+        placeholder="Search authors..."
+      >
+
+
+      <div class="author-list">
+
+        <% selected_authors.each do |author| %>
+
+          <label class="author-option">
+
+            <%= check_box_tag(
+                  "book[author_ids][]",
+                  author.id,
+                  true,
+                  class: "author-checkbox"
+                ) %>
+
+            <span>
+              <%= author.first_name %> <%= author.last_name %>
+            </span>
+
+          </label>
+
+        <% end %>
+
+
+        <% remaining_authors.each do |author| %>
+
+          <label class="author-option">
+
+            <%= check_box_tag(
+                  "book[author_ids][]",
+                  author.id,
+                  false,
+                  class: "author-checkbox"
+                ) %>
+
+            <span>
+              <%= author.first_name %> <%= author.last_name %>
+            </span>
+
+          </label>
+
+        <% end %>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <p>
+    <%= f.submit %>
+  </p>
 
 <% end %>
