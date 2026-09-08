@@ -101,9 +101,6 @@
   text-decoration: none;
   font-weight: bold;
 }
-/* ============================= */
-/* AUTHOR MULTI SELECT DROPDOWN */
-/* ============================= */
 
 .author-selector {
   position: relative;
@@ -169,12 +166,12 @@
   overflow-y: auto;
 }
 
-
-
 .author-option {
   display: flex;
   align-items: center;
+
   padding: 10px;
+
   cursor: pointer;
 }
 
@@ -205,9 +202,6 @@
 .bottom-home-button {
   margin-top: 25px;
 }
-/* ============================= */
-/* BOOK AND AUTHOR LIST SEARCH */
-/* ============================= */
 
 .listing-search {
   margin-bottom: 25px;

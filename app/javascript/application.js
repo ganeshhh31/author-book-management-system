@@ -116,10 +116,8 @@ document.addEventListener("turbo:load", () => {
 
   }
 
+// Author search //
 
-  // =============================
-  // AUTHOR LIST SEARCH
-  // =============================
 
   const authorSearch = document.querySelector("#author-search")
   const authorItems = document.querySelectorAll(".author-item")
@@ -129,7 +127,6 @@ document.addEventListener("turbo:load", () => {
 
     authorSearch.addEventListener("input", () => {
 
-      // Normalize search input
       const searchValue = authorSearch.value
         .toLowerCase()
         .replace(/\s+/g, " ")
@@ -139,7 +136,6 @@ document.addEventListener("turbo:load", () => {
 
       authorItems.forEach((author) => {
 
-        // Normalize author text
         const authorName = author.textContent
           .toLowerCase()
           .replace(/\s+/g, " ")
@@ -159,7 +155,6 @@ document.addEventListener("turbo:load", () => {
       })
 
 
-      // Show Author not found only when user types something
       if (searchValue !== "" && !found) {
         authorNotFound.style.display = "block"
       } else {
