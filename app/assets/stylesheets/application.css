@@ -170,12 +170,11 @@
 }
 
 
+
 .author-option {
-  display: flex !important;
+  display: flex;
   align-items: center;
-
   padding: 10px;
-
   cursor: pointer;
 }
 
