@@ -15,11 +15,33 @@
 
   <div class="author-selector">
 
-    <label>Select Authors</label>
+    <% if @book.persisted? && selected_authors.any? %>
 
-    <button type="button" class="author-dropdown-button">
-      Select Authors ▼
-    </button>
+      <label>
+        <%= selected_authors.count %>
+        <%= "Author".pluralize(selected_authors.count) %>
+        Selected
+      </label>
+
+      <button type="button" class="author-dropdown-button">
+
+        <%= selected_authors.map { |author|
+              "#{author.first_name} #{author.last_name}"
+            }.join(", ") %>
+
+        ▼
+
+      </button>
+
+    <% else %>
+
+      <label>Select Authors</label>
+
+      <button type="button" class="author-dropdown-button">
+        Select Authors ▼
+      </button>
+
+    <% end %>
 
 
     <div class="author-dropdown">
@@ -32,6 +54,7 @@
 
 
       <div class="author-list">
+
 
         <% selected_authors.each do |author| %>
 
@@ -71,6 +94,7 @@
           </label>
 
         <% end %>
+
 
       </div>
 
