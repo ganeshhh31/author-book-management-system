@@ -23,3 +23,5 @@ STEP 7  → Git commit + push
 
 when we are in the create or edit book in the dropdown the search button is not working 
 what is the problem and lmk how to fix it 
+
+# when we are the in the edit of the book at that time the dropdown button should be replaced by the author name and in that box where select authors is written it should be replaced by the author name of the book we already added and put a count/number in front of that box in the edit to known how many authors does our book already have it should be only displayed in the edit not on the book listing 
